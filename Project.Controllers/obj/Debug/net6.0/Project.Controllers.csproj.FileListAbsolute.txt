@@ -1,0 +1,15 @@
+C:\workspace\assemblyValidation\Project.Controllers\bin\Debug\net6.0\Project.Controllers.deps.json
+C:\workspace\assemblyValidation\Project.Controllers\bin\Debug\net6.0\Project.Controllers.dll
+C:\workspace\assemblyValidation\Project.Controllers\bin\Debug\net6.0\Project.Controllers.pdb
+C:\workspace\assemblyValidation\Project.Controllers\bin\Debug\net6.0\Project.Models.dll
+C:\workspace\assemblyValidation\Project.Controllers\bin\Debug\net6.0\Project.Models.pdb
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\Project.Controllers.csproj.AssemblyReference.cache
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\Project.Controllers.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\Project.Controllers.AssemblyInfoInputs.cache
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\Project.Controllers.AssemblyInfo.cs
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\Project.Controllers.csproj.CoreCompileInputs.cache
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\Project.Controllers.csproj.CopyComplete
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\Project.Controllers.dll
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\refint\Project.Controllers.dll
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\Project.Controllers.pdb
+C:\workspace\assemblyValidation\Project.Controllers\obj\Debug\net6.0\ref\Project.Controllers.dll
