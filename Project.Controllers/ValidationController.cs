@@ -8,7 +8,6 @@ namespace Project.Controllers
 {
     public class ValidationController
     {
-
         /// <summary>
         /// Removes the Decorator at the end from a string
         /// </summary>
@@ -27,7 +26,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="properties">Model Properties</param>
         /// <returns>Dictionary with Property Name and the applied attributes</returns>
-        public static Dictionary<string, List<ValidationResponse>> GetModelPropertyValidators(
+        private static Dictionary<string, List<ValidationResponse>> GetModelPropertyValidators(
             PropertyInfo[] properties)
         {
             if (properties == null) throw new Exception("Parameter missing");
@@ -102,6 +101,19 @@ namespace Project.Controllers
             }
 
             return propertyDictionary;
+        }
+
+        public static Dictionary<string, Dictionary<string, List<ValidationResponse>>> GetModelPropertyValidators(
+            Dictionary<string, PropertyInfo[]> propertyInfos)
+        {
+            Dictionary<string, Dictionary<string, List<ValidationResponse>>> ModelPropertyValidators = new();
+
+            foreach (var info in propertyInfos)
+            {
+                ModelPropertyValidators.Add(info.Key, GetModelPropertyValidators(info.Value));
+            }
+
+            return ModelPropertyValidators;
         }
     }
 }

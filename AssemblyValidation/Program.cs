@@ -9,14 +9,11 @@ try
     var modelsAssembly = Assembly.LoadFrom("Project.Models.dll");
     var controllerAssembly = Assembly.LoadFrom("Project.Controllers.dll");
 
-    IEnumerable<Type>? types = from assembly in AppDomain.CurrentDomain.GetAssemblies()
-                            from type in assembly.GetTypes()
-                            where !type.IsDefined(typeof(GenerateValidationAttribute))
-                            select type;
+    IEnumerable<Type>? modelTypes = from type in modelsAssembly.GetTypes()
+                                    where type.IsDefined(typeof(GenerateValidationAttribute))
+                                    select type;
 
-    PropertyInfo[] properties = GetModelAsProperties(modelsAssembly, modelPath);
-    if (!properties.Any())
-        return;
+    var properties = GetModelAsDictonaryProperties(modelTypes);
 
     Type? controllerType = controllerAssembly.GetType(validationControllerPath);
 
@@ -30,6 +27,20 @@ try
 catch (Exception ex)
 {
     Console.WriteLine(ex.Message, "Exception");
+}
+
+static Dictionary<string, PropertyInfo[]> GetModelAsDictonaryProperties(IEnumerable<Type>? type)
+{
+    Dictionary<string, PropertyInfo[]> model = new();
+
+    if (type is null) return model;
+
+    foreach (var t in type)
+    {
+        model.Add(t.Name, t.GetProperties());
+    }
+
+    return model;
 }
 
 static PropertyInfo[] GetModelAsProperties(Assembly assembly, string pathToModel)

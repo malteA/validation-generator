@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Project.Models
 {
+    [GenerateValidation]
     public class ShouldBeParsedToValidation
     {
         [JsonProperty("name")]
